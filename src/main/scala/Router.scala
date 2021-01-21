@@ -46,7 +46,7 @@ final class Router(context: AppContext) {
             patchUserRoute
           }
         } ~ {
-          (post & path("close")) {
+          ((delete & path("users")) | (post & path("close"))) {
             deleteUser
           }
         }
