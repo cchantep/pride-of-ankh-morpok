@@ -1,4 +1,4 @@
-package cchantep.giveryauth
+package cchantep.auth
 
 import scala.util.Try
 import scala.util.control.NonFatal

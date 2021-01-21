@@ -1,4 +1,4 @@
-package cchantep.giveryauth
+package cchantep.auth
 
 import scala.util.{ Failure, Success, Try }
 import scala.concurrent.Await

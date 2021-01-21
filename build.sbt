@@ -1,6 +1,6 @@
 organization := "org.github.cchantep"
 
-name := "givery-auth-server"
+name := "auth-server"
 
 // Run options
 run / fork := true

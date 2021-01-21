@@ -1,11 +1,12 @@
-package cchantep.giveryauth
+package cchantep.auth
 
 import play.api.libs.json.{
   Json,
   JsonConfiguration,
   JsonNaming,
   Format,
-  OFormat
+  OFormat,
+  Reads
 }
 
 final class UserId(val value: String) extends AnyVal {
@@ -28,7 +29,18 @@ case class Account(
     comment: Option[String])
 
 object Account {
-  implicit val reads: OFormat[Account] = JsonUtils.facade.format
+  implicit val firlat: OFormat[Account] = JsonUtils.facade.format
+}
+
+// ---
+
+case class AccountPatch(
+    password: Option[String],
+    nickname: Option[String],
+    comment: Option[String])
+
+object AccountPatch {
+  implicit val reads: Reads[AccountPatch] = JsonUtils.facade.reads
 }
 
 // ---
